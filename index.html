@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Intelligence Coach</title>
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="/face-api.min.js"></script>
+    <script defer src="/script.js"></script>
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Emotional Intelligence Coach</h1>
+            <p>Analyze your emotions through text and facial expressions</p>
+        </header>
+
+        <div class="main-content">
+            <div class="input-section">
+                <div class="camera-section">
+                    <h2>Facial Expression Analysis</h2>
+                    <div class="video-container">
+                        <video id="video" autoplay muted playsinline></video>
+                        <canvas id="overlay"></canvas>
+                    </div>
+                    <button id="startCamera" class="btn btn-primary">Start Camera</button>
+                    <div id="cameraStatus" class="status-message"></div>
+                </div>
+
+                <div class="text-section">
+                    <h2>Text Tone Analysis</h2>
+                    <textarea
+                        id="textInput"
+                        placeholder="How are you feeling today? Describe your emotions or situation..."
+                        rows="5"
+                    ></textarea>
+                </div>
+
+                <button id="analyzeBtn" class="btn btn-success">Analyze My Emotions</button>
+            </div>
+
+            <div class="output-section">
+                <div class="result-card">
+                    <h3>📝 Detected Text Tone</h3>
+                    <div id="textToneResult" class="result-content">
+                        <span class="placeholder">Enter text and click analyze</span>
+                    </div>
+                </div>
+
+                <div class="result-card">
+                    <h3>😊 Detected Facial Expression</h3>
+                    <div id="facialExpressionResult" class="result-content">
+                        <span class="placeholder">Start camera and click analyze</span>
+                    </div>
+                </div>
+
+                <div class="result-card coaching-card">
+                    <h3>💡 Coaching Advice</h3>
+                    <div id="coachingAdvice" class="result-content">
+                        <span class="placeholder">Analysis results will appear here</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Your privacy matters: All processing happens locally in your browser. No data is sent to any server.</p>
+        </footer>
+    </div>
+</body>
+</html>
